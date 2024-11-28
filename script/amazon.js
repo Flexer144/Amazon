@@ -1,4 +1,4 @@
-import {cart} from '../data/cart.js';
+import {cart, addProduct, updateQuantity} from '../data/cart.js';
 import {products} from '../data/products.js';
 
 let productHTML = '';
@@ -57,44 +57,26 @@ products.forEach((products) => {
   `
 });
 document.querySelector('.products-grid').innerHTML = productHTML;
-let cartQuantity = document.querySelector('.cart-quantity')
+
+
+function massageAdd(productId){
+  const messageAdd = document.querySelector(`.js-${productId}`);
+  messageAdd.classList.add('massage')
+  setTimeout(()=>{
+    messageAdd.classList.remove('massage')
+  }, 2000)
+}
 
 document.querySelectorAll('.js-add-to-card').forEach((button) => {
   button.addEventListener('click', () => {
     const {productId} = button.dataset
 
-    let matchingItem;
-
-    cart.forEach((item) => {
-      if(productId === item.productId){
-        matchingItem = item
-      }
-    })
-
     const quantityProduct = document.querySelector(`.js-quantity-selector-${productId}`)
     const num =  Number(quantityProduct.value)
 
-    if(matchingItem){
-      matchingItem.quantity += num
-    }else{
-      cart.push({
-        productId,
-        quantity: num
-      })
-    }
-
-    let zero = 0;
-    cart.forEach((item)=>{
-      zero += item.quantity
-    })
-    cartQuantity.innerHTML = zero;
-
-    const messageAdd = document.querySelector(`.js-${productId}`);
-    messageAdd.classList.add('massage')
-    setTimeout(()=>{
-      messageAdd.classList.remove('massage')
-    }, 2000)
-
-
+    addProduct(productId, num);
+    updateQuantity();
+    massageAdd(productId);
+    console.log(cart)
   })
 })
