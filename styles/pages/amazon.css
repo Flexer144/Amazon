@@ -143,6 +143,7 @@
      be invisible. Use JavaScript to change the
      opacity and make it visible. */
   opacity: 0;
+  transition: all 0.5s;
 }
 
 .added-to-cart img {
@@ -154,4 +155,8 @@
   width: 100%;
   padding: 8px;
   border-radius: 50px;
+}
+.massage{
+  opacity: 1;
+  transition: all 0.5s;
 }
