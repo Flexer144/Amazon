@@ -5,7 +5,7 @@ import {products} from '../data/products.js';
 let productHTML = '';
 
 cart.forEach((cartProduct)=>{
-  const productId = cartProduct.productId;
+  const productId = cartProduct.idProduct;
   let matchingProduct;
   products.forEach((product)=>{
     if(product.id === productId){
