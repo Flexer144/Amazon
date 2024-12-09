@@ -34,6 +34,14 @@ export function updateQuantity(){
   })
   cartQuantity.innerHTML = zero;
 }
+export function updateQuantityCheckout(){
+  let classItemCheckout = document.querySelector('.js-quantity-item');
+  let zero = 0;
+  cart.forEach((cartItem)=>{
+    zero += cartItem.quantity
+  })
+  classItemCheckout.innerHTML = `${zero} шт.`
+}
 
 export function removeFromCart(idProduct) {
   const newCart = [];

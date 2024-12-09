@@ -1,7 +1,7 @@
-import {cart, removeFromCart} from '../data/cart.js';
+import {cart, removeFromCart, updateQuantityCheckout} from '../data/cart.js';
 import {products} from '../data/products.js';
 
-
+updateQuantityCheckout()
 let productHTML = '';
 
 cart.forEach((cartProduct)=>{
@@ -35,7 +35,7 @@ if(matchingProduct){
             <span>
               Quantity: <span class="quantity-label">${cartProduct.quantity}</span>
             </span>
-            <span class="update-quantity-link link-primary">
+            <span class="update-quantity-link link-primary js-update-link" data-product-id="${matchingProduct.id}">
               Update
             </span>
             <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingProduct.id}">
@@ -107,12 +107,6 @@ document.querySelectorAll('.js-delete-link').forEach((link)=>{
     const productContainer = document.querySelector(`.js-cart-item-container-${idProduct}`)
     console.log(productContainer)
     productContainer.remove()
+    updateQuantityCheckout()
     })
 })
-
-let classItemCheckout = document.querySelector('.js-quantity-item');
-let counter = 0;
-cart.forEach((cartItem)=>{
-  counter += cartItem.quantity
-})
-classItemCheckout.innerHTML = `${counter} шт.`

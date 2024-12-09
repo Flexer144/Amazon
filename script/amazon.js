@@ -1,6 +1,6 @@
 import {cart, addProduct, updateQuantity} from '../data/cart.js';
 import {products} from '../data/products.js';
-
+updateQuantity()
 let productHTML = '';
 
 
