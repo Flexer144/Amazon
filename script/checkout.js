@@ -96,6 +96,9 @@ if(matchingProduct){
 
 document.querySelector('.js-order-summary').innerHTML = productHTML;
 
+
+
+
 document.querySelectorAll('.js-delete-link').forEach((link)=>{
   link.addEventListener('click', ()=>{
     const idProduct = link.dataset.productId
@@ -107,3 +110,9 @@ document.querySelectorAll('.js-delete-link').forEach((link)=>{
     })
 })
 
+let classItemCheckout = document.querySelector('.js-quantity-item');
+let counter = 0;
+cart.forEach((cartItem)=>{
+  counter += cartItem.quantity
+})
+classItemCheckout.innerHTML = `${counter} шт.`
