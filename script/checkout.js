@@ -1,6 +1,14 @@
 import {cart, removeFromCart, updateQuantityCheckout} from '../data/cart.js';
 import {products} from '../data/products.js';
 
+dayjs.extend(dayjs_plugin_localizedFormat);
+dayjs.locale('ru');
+
+const today = dayjs();
+const deliveryDate = today.add(7, 'Days')
+console.log(deliveryDate.format('dddd, MMMM D')); // Например, "14 октября 2023 г."
+
+
 updateQuantityCheckout()
 let productHTML = '';
 
@@ -17,7 +25,7 @@ if(matchingProduct){
   productHTML += `
     <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
       <div class="delivery-date">
-        Delivery date: Tuesday, June 21
+        Дата доставки: Среда, 21 декабря
       </div>
 
       <div class="cart-item-details-grid">
@@ -33,20 +41,17 @@ if(matchingProduct){
           </div>
           <div class="product-quantity">
             <span>
-              Quantity: <span class="quantity-label">${cartProduct.quantity}</span>
-            </span>
-            <span class="update-quantity-link link-primary js-update-link" data-product-id="${matchingProduct.id}">
-              Update
+              Количество: <span class="quantity-label">${cartProduct.quantity}</span>
             </span>
             <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingProduct.id}">
-              Delete
+              &#10006;
             </span>
           </div>
         </div>
 
         <div class="delivery-options">
           <div class="delivery-options-title">
-            Choose a delivery option:
+            Выберите вариант доставки:
           </div>
           <div class="delivery-option">
             <input type="radio" checked
@@ -54,10 +59,10 @@ if(matchingProduct){
               name="${matchingProduct.name}">
             <div>
               <div class="delivery-option-date">
-                Tuesday, June 21
+                Среда, 21 декабря
               </div>
               <div class="delivery-option-price">
-                FREE Shipping
+                Бесплатная доставка
               </div>
             </div>
           </div>
@@ -67,10 +72,10 @@ if(matchingProduct){
               name="${matchingProduct.name}">
             <div>
               <div class="delivery-option-date">
-                Wednesday, June 15
+                Пятница, 16 декабря
               </div>
               <div class="delivery-option-price">
-                500₽ - Shipping
+                Доставка - 500₽
               </div>
             </div>
           </div>
@@ -80,10 +85,10 @@ if(matchingProduct){
               name="${matchingProduct.name}">
             <div>
               <div class="delivery-option-date">
-                Monday, June 13
+                Понедельник, 12 декабря
               </div>
               <div class="delivery-option-price">
-                1000₽ - Shipping
+                Доставка - 1000₽
               </div>
             </div>
           </div>
