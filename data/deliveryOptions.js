@@ -1,6 +1,6 @@
-const deliveryOptions =  [{
+export const deliveryOptions =  [{
   id: '1',
-  deliveryDate: 7,
+  deliveryDate: 13,
   price: 0
 },{
   id: '2',
@@ -8,7 +8,8 @@ const deliveryOptions =  [{
   price: 199
 },{
   id: '3',
-  deliveryDate: 2,
+  deliveryDate: 1,
   price: 299
 }
 ]
+export default deliveryOptions;
