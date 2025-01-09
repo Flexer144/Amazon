@@ -1,0 +1,22 @@
+{
+  "name": "Amazon",
+  "short_name": "Amazon",
+  "icons": [
+    {
+      "src": "images/icons/Amazon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/Amazon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Интернет магазин",
+  "orientation": "portrait"
+}
