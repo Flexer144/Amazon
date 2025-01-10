@@ -1,6 +1,7 @@
 import {cart, removeFromCart, updateQuantityCheckout, updateDeliveryOption} from '../../data/cart.js';
-import {products} from '../../data/products.js';
-import deliveryOptions from '../../data/deliveryOptions.js';
+import {products, getProduct} from '../../data/products.js';
+import { renderPaymentSummary } from './paymentSummary.js';
+import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js';
 updateQuantityCheckout()
 
 dayjs.extend(dayjs_plugin_localizedFormat);
@@ -12,21 +13,11 @@ export function renderOrderSummary(){
 
   cart.forEach((cartProduct)=>{
     const productId = cartProduct.idProduct;
-    let matchingProduct;
-    products.forEach((product)=>{
-      if(product.id === productId){
-        matchingProduct = product;
-      }
-    })
-
+    let matchingProduct = getProduct(productId)
 
     const deliveryOptionId = cartProduct.deliveryOptionId
-    let deliveryOption;
-    deliveryOptions.forEach((option)=>{
-      if(option.id === deliveryOptionId){
-        deliveryOption = option;
-      }
-    });
+    const deliveryOption = getDeliveryOption(deliveryOptionId)
+
     const today = dayjs();
     let dateString = '';
     if (deliveryOption) {
@@ -35,7 +26,6 @@ export function renderOrderSummary(){
         'days'
       );
       dateString = deliveryDate.format('dddd, D MMMM');
-      // Используйте dateString дальше в коде
     } else {
       console.error('Delivery option not found for ID:', deliveryOptionId);
     }
@@ -145,6 +135,7 @@ export function renderOrderSummary(){
         const deliveryOptionId = element.dataset.deliveryOptionId
         updateDeliveryOption(idProduct, deliveryOptionId)
         renderOrderSummary()
+        renderPaymentSummary()
       });
 
     });
