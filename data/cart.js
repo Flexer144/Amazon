@@ -51,6 +51,7 @@ export function updateQuantityCheckout(){
     zero += cartItem.quantity
   })
   classItemCheckout.innerHTML = `${zero} шт.`
+  return zero;
 }
 
 export function removeFromCart(idProduct) {

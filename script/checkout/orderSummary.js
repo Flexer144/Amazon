@@ -124,6 +124,7 @@ export function renderOrderSummary(){
       console.log(productContainer)
       productContainer.remove()
       updateQuantityCheckout()
+      renderPaymentSummary()
       })
   })
 

@@ -1,4 +1,4 @@
-import { cart } from "../../data/cart.js"
+import { cart, updateQuantityCheckout } from "../../data/cart.js"
 import { getProduct } from "../../data/products.js";
 import { getDeliveryOption } from "../../data/deliveryOptions.js";
 
@@ -16,8 +16,46 @@ export function renderPaymentSummary(){
   });
 
   const totalBeforeTax = productPrice + shipingPrice
-  const tax = totalBeforeTax * 0.1
+  const tax = Math.round(totalBeforeTax * 0.1)
 
   const totalOrderPrice = totalBeforeTax + tax
   console.log(productPrice, shipingPrice, totalBeforeTax, tax, totalOrderPrice)
+
+
+  const paymentSummaryHTML = `
+    <div class="payment-summary-title">
+      Оформление заказа
+    </div>
+
+    <div class="payment-summary-row">
+      <div>Всего (${updateQuantityCheckout()}):</div>
+      <div class="payment-summary-money">${productPrice} ₽</div>
+    </div>
+
+    <div class="payment-summary-row">
+      <div>Доставка:</div>
+      <div class="payment-summary-money">${shipingPrice} ₽</div>
+    </div>
+
+    <div class="payment-summary-row subtotal-row">
+      <div>Итого (без налога):</div>
+      <div class="payment-summary-money">${totalBeforeTax} ₽</div>
+    </div>
+
+    <div class="payment-summary-row">
+      <div>Налог (10%):</div>
+      <div class="payment-summary-money">${tax} ₽</div>
+    </div>
+
+    <div class="payment-summary-row total-row">
+      <div>К оформлению:</div>
+      <div class="payment-summary-money">${totalOrderPrice} ₽</div>
+    </div>
+
+    <button class="place-order-button button-primary">
+      Заказать
+    </button>
+  `
+
+  document.querySelector('.payment-summary-js').innerHTML = paymentSummaryHTML;
 }
