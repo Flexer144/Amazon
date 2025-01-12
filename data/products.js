@@ -13,176 +13,6 @@ export function getProduct(productId){
 
 export const products = [
   {
-    "id": "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-    "image": "images/products/athletic-cotton-socks-6-pairs.jpg",
-    "name": "Черно-серые спортивные хлопковые носки — 6 пар",
-    "rating": {
-      "stars": 4.5,
-      "count": 87
-    },
-    "priceCents": 1090,
-    "keywords": [
-      "носки",
-      "спорт",
-      "одежда"
-    ]
-  },
-  {
-    "id": "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-    "image": "images/products/intermediate-composite-basketball.jpg",
-    "name": "Баскетбольный мяч среднего размера",
-    "rating": {
-      "stars": 4,
-      "count": 127
-    },
-    "priceCents": 2095,
-    "keywords": [
-      "спорт",
-      "баскетбольные мячи"
-    ]
-  },
-  {
-    "id": "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    "image": "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-    "name": "Однотонная хлопковая футболка для взрослых — 2 шт.",
-    "rating": {
-      "stars": 4.5,
-      "count": 56
-    },
-    "priceCents": 799,
-    "keywords": [
-      "футболки",
-      "одежда",
-      "Мужской"
-    ],
-    "type": "одежда",
-    "sizeChartLink": "images/одежда-размер-диаграмма.png"
-  },
-  {
-    "id": "54e0eccd-8f36-462b-b68a-8182611d9добавить",
-    "image": "images/products/black-2-slot-toaster.jpg",
-    "name": "Тостер на 2 слота - черный",
-    "rating": {
-      "stars": 5,
-      "count": 2197
-    },
-    "priceCents": 1899,
-    "keywords": [
-      "тостер",
-      "кухня",
-      "техника"
-    ]
-  },
-  {
-    "id": "3ebe75dc-64d2-4137-8860-1f5a963e534b",
-    "image": "images/products/6-piece-white-dinner-plate-set.jpg",
-    "name": "Набор белых обеденных тарелок из 6 предметов",
-    "rating": {
-      "stars": 4,
-      "count": 37
-    },
-    "priceCents": 2067,
-    "keywords": [
-      "тарелки",
-      "кухня",
-      "столовая"
-    ]
-  },
-  {
-    "id": "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
-    "image": "images/products/6-piece-non-stick-baking-set.webp",
-    "name": "Набор для выпечки в духовке из 6 предметов с антипригарным покрытием, набор для выпечки из углеродистой стали",
-    "rating": {
-      "stars": 4.5,
-      "count": 175
-    },
-    "priceCents": 3499,
-    "keywords": [
-      "кухня",
-      "посуда"
-    ]
-  },
-  {
-    "id": "dd82ca78-a18b-4e2a-9250-31e67412f98d",
-    "image": "images/products/plain-hooded-fleece-sweatshirt-yellow.jpg",
-    "name": "Однотонная флисовая толстовка с капюшоном",
-    "rating": {
-      "stars": 4.5,
-      "count": 317
-    },
-    "priceCents": 2400,
-    "keywords": [
-      "толстовки",
-      "свитера",
-      "одежда"
-    ]
-  },
-  {
-    "id": "77919bbe-0e56-475b-adde-4f24dfed3a04",
-    "image": "images/products/luxury-tower-set-6-piece.jpg",
-    "name": "Роскошный набор полотенец - графитовый серый",
-    "rating": {
-      "stars": 4.5,
-      "count": 144
-    },
-    "priceCents": 3599,
-    "keywords": [
-      "ванная комната",
-      "туалет",
-      "туалет",
-      "полотенца",
-      "банные полотенца"
-    ]
-  },
-  {
-    "id": "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
-    "image": "images/products/liquid-laundry-detergent-plain.jpg",
-    "name": "Жидкий стиральный порошок, 110 загрузок, 82,5 жидких унции",
-    "rating": {
-      "stars": 4.5,
-      "count": 305
-    },
-    "priceCents": 2899,
-    "keywords": [
-      "ванная комната",
-      "уборка"
-    ]
-  },
-  {
-    "id": "58b4fc92-e98c-42aa-8c55-b6b79996769a",
-    "image": "images/products/knit-athletic-sneakers-gray.jpg",
-    "name": "Водонепроницаемые Трикотажные Спортивные Кроссовки - Серый",
-    "rating": {
-      "stars": 4,
-      "count": 89
-    },
-    "priceCents": 3390,
-    "keywords": [
-      "обувь",
-      "кроссовки",
-      "обувь"
-    ]
-  },
-  {
-    "id": "5968897c-4d27-4872-89f6-5bcb052746d7",
-    "image": "images/products/women-chiffon-beachwear-coverup-black.jpg",
-    "name": "Женское шифоновое пляжное накидка - черный",
-    "rating": {
-      "stars": 4.5,
-      "count": 235
-    },
-    "priceCents": 2070,
-    "keywords": [
-      "халат",
-      "купальник",
-      "плавание",
-      "купание",
-      "одежда"
-    ],
-    "type": "одежда",
-    "sizeChartLink": "images/одежда-размер-диаграмма.png"
-  },
-  {
     "id": "aad29d11-ea98-41ee-9285-b916638cac4a",
     "image": "images/products/round-sunglasses-black.jpg",
     "name": "Круглые солнцезащитные очки",
@@ -669,5 +499,175 @@ export const products = [
       "одежда",
       "Мужской"
     ]
+  },
+  {
+    "id": "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+    "image": "images/products/athletic-cotton-socks-6-pairs.jpg",
+    "name": "Черно-серые спортивные хлопковые носки — 6 пар",
+    "rating": {
+      "stars": 4.5,
+      "count": 87
+    },
+    "priceCents": 1090,
+    "keywords": [
+      "носки",
+      "спорт",
+      "одежда"
+    ]
+  },
+  {
+    "id": "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+    "image": "images/products/intermediate-composite-basketball.jpg",
+    "name": "Баскетбольный мяч среднего размера",
+    "rating": {
+      "stars": 4,
+      "count": 127
+    },
+    "priceCents": 2095,
+    "keywords": [
+      "спорт",
+      "баскетбольные мячи"
+    ]
+  },
+  {
+    "id": "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+    "image": "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
+    "name": "Однотонная хлопковая футболка для взрослых — 2 шт.",
+    "rating": {
+      "stars": 4.5,
+      "count": 56
+    },
+    "priceCents": 799,
+    "keywords": [
+      "футболки",
+      "одежда",
+      "Мужской"
+    ],
+    "type": "одежда",
+    "sizeChartLink": "images/одежда-размер-диаграмма.png"
+  },
+  {
+    "id": "54e0eccd-8f36-462b-b68a-8182611d9добавить",
+    "image": "images/products/black-2-slot-toaster.jpg",
+    "name": "Тостер на 2 слота - черный",
+    "rating": {
+      "stars": 5,
+      "count": 2197
+    },
+    "priceCents": 1899,
+    "keywords": [
+      "тостер",
+      "кухня",
+      "техника"
+    ]
+  },
+  {
+    "id": "3ebe75dc-64d2-4137-8860-1f5a963e534b",
+    "image": "images/products/6-piece-white-dinner-plate-set.jpg",
+    "name": "Набор белых обеденных тарелок из 6 предметов",
+    "rating": {
+      "stars": 4,
+      "count": 37
+    },
+    "priceCents": 2067,
+    "keywords": [
+      "тарелки",
+      "кухня",
+      "столовая"
+    ]
+  },
+  {
+    "id": "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
+    "image": "images/products/6-piece-non-stick-baking-set.webp",
+    "name": "Набор для выпечки в духовке из 6 предметов с антипригарным покрытием, набор для выпечки из углеродистой стали",
+    "rating": {
+      "stars": 4.5,
+      "count": 175
+    },
+    "priceCents": 3499,
+    "keywords": [
+      "кухня",
+      "посуда"
+    ]
+  },
+  {
+    "id": "dd82ca78-a18b-4e2a-9250-31e67412f98d",
+    "image": "images/products/plain-hooded-fleece-sweatshirt-yellow.jpg",
+    "name": "Однотонная флисовая толстовка с капюшоном",
+    "rating": {
+      "stars": 4.5,
+      "count": 317
+    },
+    "priceCents": 2400,
+    "keywords": [
+      "толстовки",
+      "свитера",
+      "одежда"
+    ]
+  },
+  {
+    "id": "77919bbe-0e56-475b-adde-4f24dfed3a04",
+    "image": "images/products/luxury-tower-set-6-piece.jpg",
+    "name": "Роскошный набор полотенец - графитовый серый",
+    "rating": {
+      "stars": 4.5,
+      "count": 144
+    },
+    "priceCents": 3599,
+    "keywords": [
+      "ванная комната",
+      "туалет",
+      "туалет",
+      "полотенца",
+      "банные полотенца"
+    ]
+  },
+  {
+    "id": "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
+    "image": "images/products/liquid-laundry-detergent-plain.jpg",
+    "name": "Жидкий стиральный порошок, 110 загрузок, 82,5 жидких унции",
+    "rating": {
+      "stars": 4.5,
+      "count": 305
+    },
+    "priceCents": 2899,
+    "keywords": [
+      "ванная комната",
+      "уборка"
+    ]
+  },
+  {
+    "id": "58b4fc92-e98c-42aa-8c55-b6b79996769a",
+    "image": "images/products/knit-athletic-sneakers-gray.jpg",
+    "name": "Водонепроницаемые Трикотажные Спортивные Кроссовки - Серый",
+    "rating": {
+      "stars": 4,
+      "count": 89
+    },
+    "priceCents": 3390,
+    "keywords": [
+      "обувь",
+      "кроссовки",
+      "обувь"
+    ]
+  },
+  {
+    "id": "5968897c-4d27-4872-89f6-5bcb052746d7",
+    "image": "images/products/women-chiffon-beachwear-coverup-black.jpg",
+    "name": "Женское шифоновое пляжное накидка - черный",
+    "rating": {
+      "stars": 4.5,
+      "count": 235
+    },
+    "priceCents": 2070,
+    "keywords": [
+      "халат",
+      "купальник",
+      "плавание",
+      "купание",
+      "одежда"
+    ],
+    "type": "одежда",
+    "sizeChartLink": "images/одежда-размер-диаграмма.png"
   }
 ]

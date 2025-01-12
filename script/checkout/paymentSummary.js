@@ -19,8 +19,6 @@ export function renderPaymentSummary(){
   const tax = Math.round(totalBeforeTax * 0.1)
 
   const totalOrderPrice = totalBeforeTax + tax
-  console.log(productPrice, shipingPrice, totalBeforeTax, tax, totalOrderPrice)
-
 
   const paymentSummaryHTML = `
     <div class="payment-summary-title">

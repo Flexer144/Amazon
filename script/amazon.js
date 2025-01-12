@@ -77,6 +77,5 @@ document.querySelectorAll('.js-add-to-card').forEach((button) => {
     addProduct(productId, num);
     updateQuantity();
     massageAdd(productId);
-    console.log(cart)
   })
 })
