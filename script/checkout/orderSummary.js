@@ -2,13 +2,13 @@ import {cart, removeFromCart, updateQuantityCheckout, updateDeliveryOption} from
 import {products, getProduct} from '../../data/products.js';
 import { renderPaymentSummary } from './paymentSummary.js';
 import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js';
-updateQuantityCheckout()
-
-dayjs.extend(dayjs_plugin_localizedFormat);
-dayjs.locale('ru');
 
 
 export function renderOrderSummary(){
+  updateQuantityCheckout()
+  dayjs.extend(dayjs_plugin_localizedFormat);
+  dayjs.locale('ru');
+
   let productHTML = '';
 
   cart.forEach((cartProduct)=>{
@@ -32,7 +32,7 @@ export function renderOrderSummary(){
     
   if(matchingProduct){
     productHTML += `
-      <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
+      <div class="cart-item-container js-cart-item-container js-cart-item-container-${matchingProduct.id}">
         <div class="delivery-date">
           Дата доставки: ${dateString}
         </div>
@@ -48,11 +48,13 @@ export function renderOrderSummary(){
             <div class="product-price">
             ${matchingProduct.priceCents}₽
             </div>
-            <div class="product-quantity">
+            <div class="product-quantity js-product-quantity-${matchingProduct.id}">
               <span>
                 Количество: <span class="quantity-label">${cartProduct.quantity}</span>
               </span>
-              <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingProduct.id}">
+              <span class="delete-quantity-link link-primary js-delete-link 
+                js-delete-link-${matchingProduct.id}" 
+                data-product-id="${matchingProduct.id}">
                 &#10006;
               </span>
             </div>
