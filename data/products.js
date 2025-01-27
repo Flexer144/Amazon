@@ -10,6 +10,7 @@ export function getProduct(productId){
     return matchingProduct;
 }
 
+//Создание класа
 class Product {
   id;
   image;
@@ -27,6 +28,26 @@ class Product {
 
   getStarsUrl(){
     return `images/ratings/rating-${this.rating.stars * 10}.png`
+  }
+
+  extraInfoHTML(){
+    return ``;
+  }
+}
+
+//Создание класса унаследовавшего методы и свойства класса Product
+class Clothing extends Product {
+  sizeChartLink;
+
+  constructor(productDetails){
+    super(productDetails)
+    this.sizeChartLink = productDetails.sizeChartLink;
+  }
+
+  extraInfoHTML(){
+    return `
+      <a href="${this.sizeChartLink}" target="_blank">Size chart</a>
+    `;
   }
 }
 
@@ -690,5 +711,9 @@ export const products = [
     "sizeChartLink": "images/одежда-размер-диаграмма.png"
   }
 ].map((productDetails)=>{
-  return new Product(productDetails)
+  if(productDetails.type === 'одежда'){
+    return new Clothing(productDetails)
+  }else {
+    return new Product(productDetails)
+  }
 })

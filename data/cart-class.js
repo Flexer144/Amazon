@@ -99,7 +99,5 @@ class Cart {
 const cart = new Cart('cart-oop')
 const businessCart = new Cart('cart-business')
 
-cart.localStorageKey = 'asd'
-
 console.log(cart);
 console.log(businessCart);
