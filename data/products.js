@@ -51,32 +51,6 @@ class Clothing extends Product {
   }
 }
 
-/*
-const date = new Date();
-console.log(date)
-console.log(date.toLocaleDateString())
-*/
-
-/*
-function logThis(){
-  console.log(this) // undefined
-}
-logThis() // undefined
-logThis.call('hello') // hello
-logThis.call(2+2) // 4
-*/
-
-/*
-const object = {
-  method: () => {
-    console.log(this) // undefined
-  }
-}
-object.method() // undefined
-object.method.call('object') // undefined
-*/
-
-
 export const products = [
   {
     "id": "aad29d11-ea98-41ee-9285-b916638cac4a",
@@ -743,3 +717,28 @@ export const products = [
     return new Product(productDetails)
   }
 })
+
+/*
+const date = new Date();
+console.log(date)
+console.log(date.toLocaleDateString())
+*/
+
+/*
+function logThis(){
+  console.log(this) // undefined
+}
+logThis() // undefined
+logThis.call('hello') // hello
+logThis.call(2+2) // 4
+*/
+
+/*
+const object = {
+  method: () => {
+    console.log(this) // undefined
+  }
+}
+object.method() // undefined
+object.method.call('object') // undefined
+*/
